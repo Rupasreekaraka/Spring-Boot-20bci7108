@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tranquil Haven Inn</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+  <style>
+    body {
+    background-image: url("/images/hotel3.png");
+        background-repeat:no-repeat;
+        background-size: auto;
+        background-position: center top;
+        padding-top: 60px;
+      background-color: #f8f9fa;
+      padding-top: 5rem;
+    }
+
+    .navbar {
+      background-color: #343a40;
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: #fff;
+    }
+
+    .form-label {
+      font-weight: bold;
+    }
+
+    .card {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header {
+      background-color: #343a40;
+      color: #fff;
+    }
+
+    .btn-primary {
+      background-color: #343a40;
+      border-color: #343a40;
+    }
+
+    .btn-primary:hover {
+      background-color: #23272b;
+      border-color: #23272b;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">Tranquil Haven Inn</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="Receptionist_home">Home</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link text-white" href="reception">Reception</a>
+          </li>
+        </ul>
+    
+        <div>
+          <a class="nav-link text-white" href="logout">Logout</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<div class="container my-5">
+    <div class="card mx-auto" style="max-width: 30rem;">
+      <div class="card-header text-center">
+        <h4>Edit Driver</h4>
+      </div>
+      <div class="card-body">
+        <form class="row g-3" action="processForm.jsp" th:action="@{/dsave}" method="post" th:object="${Driver}">
+		  <div class="col-12">
+            <label for="id" class="form-label">Name</label>
+            <input type="text" class="form-control" id="id" name="id" th:value="${Driver.id}">
+          </div>
+          <div class="col-12">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" th:value="${Driver.name}">
+          </div>
+          <div class="col-6">
+            <label for="age" class="form-label">Age</label>
+            <input type="text" class="form-control" id="age" name="age" th:value="${Driver.age}">
+          </div>
+          <div class="col-6">
+            <label for="gender" class="form-label">Gender</label>
+            <select class="form-select" id="gender" name="gender" th:value="${Driver.gender}">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="col-12">
+            <label for="carcompany" class="form-label">Car Company</label>
+            <input type="text" class="form-control" id="carcompany" name="carcompany" th:value="${Driver.carcompany}">
+          </div>
+          <div class="col-6">
+            <label for="carmodel" class="form-label">Car Model</label>
+            <input type="text" class="form-control" id="carmodel" name="carmodel" th:value="${Driver.carmodel}">
+          </div>
+          <div class="col-6">
+            <label for="available" class="form-label">Availability</label>
+            <select class="form-select" id="availability" name="available" th:value="${Driver.available}">
+              <option value="available">Available</option>
+              <option value="notAvailable">Not Available</option>
+            </select>
+          </div>
+          <div class="col-12 text-center">
+            <button type="submit" class="btn btn-primary">Edit Driver</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.com">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>Tranquil Haven Inn</title>
+  <style>
+    body {
+      background-image: url("/images/bg.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center top;
+      padding-top: 60px;
+    }
+
+    .navbar {
+      background-color: #343a40;
+      border-bottom: 2px solid #f8f9fa;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+    }
+
+    .navbar-nav .nav-link {
+      color: #f8f9fa !important;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .container div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .container div:hover {
+      transform: translateY(-5px);
+    }
+
+    .container img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .container button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #000;
+      color: #f8f9fa;
+      border: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .container button:hover {
+      background-color: #1b1e21;
+    }
+    
+    .button {
+      background-color: #000;
+      width: 250px;
+      height: 350px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+      color: #f8f9fa;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      transform: translateY(-5px);
+      background-color: #1b1e21;
+    }
+    
+    .button h5 {
+      margin-top: 10px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <a class="button" href="Admin_login">
+      <img src="/images/admin.jpg" alt="Image 1">
+      <h5>Administrator</h5>
+      <button class="btn btn-primary">Login</button>
+    </a>
+    <a class="button" href="Receptionsit_Login">
+      <img src="/images/receptionist.png" alt="Image 2">
+      <h5>Receptionist</h5>
+      <button class="btn btn-primary">Login</button>
+    </a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pzjw0Jn+DD5yX+duNE7J+3pUu0Z1CkLmUV5qftDcCVhVMfypmcKzjaYbq5VE2ftN"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

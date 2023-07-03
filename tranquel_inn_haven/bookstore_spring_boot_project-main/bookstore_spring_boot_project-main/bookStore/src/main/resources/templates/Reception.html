@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.com">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>Tranquil Haven Inn</title>
+  <style>
+    body {
+      background-image: url("/images/hotel3.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: center top;
+      padding-top: 60px;
+      background-color: #f8f9fa;
+    }
+
+    .navbar {
+      background-color: #343a40;
+      border-bottom: 2px solid #f8f9fa;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+    }
+
+    .navbar-nav .nav-link {
+      color: #f8f9fa !important;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+      max-width: 1200px; /* Set a max-width to limit the container size */
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .container div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+      width: calc(25% - 20px); /* Each card occupies one-fourth of the row */
+    }
+
+    .container div:hover {
+      transform: translateY(-5px);
+    }
+
+    .container img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .container button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #343a40;
+      color: #f8f9fa;
+      border: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .container button:hover {
+      background-color: #1b1e21;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">Tranquil Haven Inn</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="Receptionist_home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="reception">Reception</a>
+          </li>
+        </ul>
+        
+        <div>
+          <a class="nav-link text-white" href="logout">Logout</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div>
+      <img src="/images/newcoustomerform.jpg" alt="Image 1">
+      <h5>New Customer Form</h5>
+      <button class="btn btn-dark">
+        <a class="text-white" href="Newcustomerform">New Customer Form</a>
+      </button>
+    </div>
+    <div>
+      <img src="/images/roomreception.png" alt="Image 2">
+      <h5>Rooms</h5>
+      <button class="btn btn-dark">
+        <a class="text-white" href="room_list">Room</a>
+      </button>
+    </div>
+    
+    <div>
+      <img src="/images/employee.png" alt="Image 4">
+      <h5>Employee Info</h5>
+      <button class="btn btn-dark">
+        <a class="text-white" href="employee_list">Employee Info</a>
+      </button>
+    </div>
+    <div>
+      <img src="/images/coustmerinfo.png" alt="Image 5">
+      <h5>Customer Info</h5>
+      <button class="btn btn-dark">
+        <a class="text-white" href="customer_list">Customer Info</a>
+      </button>
+    </div>
+    
+    <div>
+      <img src="/images/checkout.png" alt="Image 7">
+      <h5>Check Out</h5>
+      <button class="btn btn-dark">
+        <a class="text-white" href="check_Out">Check Out</a>
+      </button>
+    </div>
+    <div>
+      <img src="/images/updatestatus.png" alt="Image 8">
+      <h5>Update Status</h5>
+      <button class="btn btn-dark">
+        <a class="text-white" href="update_status">Update Status</a>
+      </button>
+    </div>
+    <div>
+      <img src="/images/updateroomstatus.png" alt="Image 9">
+      <h5>Update Room Status</h5>
+      <button class="btn btn-dark">
+        <a class="text-white" href="update_roomlist">Update Room Status</a>
+      </button>
+    </div>
+    <div>
+      <img src="/images/pickupservice.jpg" alt="Image 10">
+      <h5>Pick Up Service</h5>
+      <button class="btn btn-dark">
+        <a class="text-white" href="driver_list">Pick Up Service</a>
+      </button>
+    </div>
+    <div>
+      <img src="/images/roomsearch.png" alt="Image 11">
+      <h5>Room Search</h5>
+      <button class="btn btn-dark">
+        <a class="text-white" href="room_searchlist">Room Search</a>
+      </button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw0Jn+DD5yX+duNE7J+3pUu0Z1CkLmUV5qftDcCVhVMfypmcKzjaYbq5VE2ftN" crossorigin="anonymous"></script>
+</body>
+</html>

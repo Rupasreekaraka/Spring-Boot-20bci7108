@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hotel Receptionist Login Page</title>
+  <style>
+    body {
+	  background-image: url("/images/hotel3.png");
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position: center top;
+      padding-top: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f1f1f1;
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      width: 400px;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      color: #666;
+    }
+    
+    .form-group input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    
+    .form-group button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    .form-group button:hover {
+      background-color: #45a049;
+    }
+    
+    .form-group .signup-link {
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    .form-group .signup-link a {
+      color: #666;
+      text-decoration: none;
+    }
+    
+    .form-group .signup-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Receptionist Login</h2>
+    <form method="post">
+      <div class="form-group">
+        <label for="id">User Id</label>
+        <input type="text" id="id" name="id" placeholder="Enter your id" required>
+      </div>
+      <div class="form-group">
+        <label for="name">Password</label>
+        <input type="password" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <button type="submit">Login</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

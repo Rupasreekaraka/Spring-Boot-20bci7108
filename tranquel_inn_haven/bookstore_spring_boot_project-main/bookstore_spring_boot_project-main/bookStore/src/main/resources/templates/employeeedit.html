@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tranquil Haven Inn</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+  <style>
+    body {
+    background-image: url("/images/hotel3.png");
+        background-repeat:no-repeat;
+        background-size: auto;
+        background-position: center top;
+        padding-top: 60px;
+      background-color: #f8f9fa;
+      padding-top: 5rem;
+    }
+
+    .navbar {
+      background-color: #343a40;
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: #fff;
+    }
+
+    .form-label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <div class="container my-5">
+    <div class="card mx-auto" style="max-width: 30rem;">
+      <div class="card-header text-center">
+        <h4>Edit Employee</h4>
+      </div>
+      <div class="card-body">
+        <form class="row g-3" action="processForm.jsp" th:action="@{/save}" method="post" th:object="${employee}">
+        <div class="col-12">
+            <label for="id" class="form-label">ID</label>
+            <input type="text" class="form-control" id="id" name="id" th:value="${employee.id}">
+          </div>
+          <div class="col-12">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" th:value="${employee.name}">
+          </div>
+          <div class="col-6">
+            <label for="age" class="form-label">Age</label>
+            <input type="text" class="form-control" id="age" name="age" th:value="${employee.age}">
+          </div>
+          <div class="col-6">
+            <label for="gender" class="form-label">Gender</label>
+            <input type="text" class="form-control" id="gender" name="gender" th:value="${employee.gender}">
+          </div>
+          <div class="col-12">
+  <label for="job" class="form-label">Job</label>
+  <select class="form-select" id="job" name="job" th:value="${employee.job}">
+	<option value="Receptionist">Receptionist</option>
+    <option value="house keeping">House Keeping</option>
+    <option value="kitchen staff">Kitchen Staff</option>
+    <option value="Room Service">Room Service</option>
+    <option value="Manager">Manager</option>
+    <option value="Accountant">Accountant</option>
+    <option value="Chef">Chef</option>
+    <option value="Waiter/Waitress">Waiter/Waitress</option>
+  </select>
+</div>
+          <div class="col-6">
+            <label for="salary" class="form-label">Salary</label>
+            <input type="text" class="form-control" id="salary" name="salary" th:value="${employee.salary}">
+          </div>
+          <div class="col-6">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="text" class="form-control" id="phone" name="phone" th:value="${employee.phone}">
+          </div>
+          <div class="col-6">
+            <label for="aadhar" class="form-label">Aadhar</label>
+            <input type="text" class="form-control" id="aadhar" name="aadhar" th:value="${employee.aadhar}">
+          </div>
+          <div class="col-6">
+            <label for="email" class="form-label">Email</label>
+            <input type="text" class="form-control" id="email" name="email" th:value="${employee.email}">
+          </div>
+          <div class="col-12 text-center">
+            <button type="submit" class="btn btn-primary">Edit Employee</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

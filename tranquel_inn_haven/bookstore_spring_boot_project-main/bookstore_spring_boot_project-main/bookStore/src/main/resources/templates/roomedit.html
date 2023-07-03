@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tranquil Haven Inn</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+  <style>
+    body {
+    background-image: url("/images/hotel3.png");
+        background-repeat:no-repeat;
+        background-size: auto;
+        background-position: center top;
+        padding-top: 60px;
+      background-color: #f8f9fa;
+      padding-top: 5rem;
+    }
+
+    .navbar {
+      background-color: #343a40;
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: #fff;
+    }
+
+    .form-label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  
+
+  <div class="container my-6">
+    <div class="card mx-auto" style="max-width: 30rem;">
+      <div class="card-header text-center">
+        <h4>Edit Room</h4>
+      </div>
+      <div class="card-body">
+        <form class="row g-4" th:action="@{/ersave}" method="post" th:object="${room}">
+          <div class="col-12">
+            <label for="id" class="form-label">Room Number</label>
+            <input type="text" class="form-control" id="id" name="id" th:value="${room.id}">
+          </div>
+           <div class="col-6">
+          <label for="availability" class="form-label">Availability</label>
+  <select class="form-select" id="availability" name="availability" th:value="${room.availability}">
+    <option value="available">Available</option>
+    <option value="occupied">Occupied</option>
+  </select>
+</div>
+           <div class="col-6">
+          <label for="cleaningstatus" class="form-label">Cleaning Status</label>
+  <select class="form-select" id="cleaningstatus" name="cleaningstatus" th:value="${room.cleaningstatus}">
+    <option value="cleaned">Cleaned</option>
+    <option value="not cleaned">Not Cleaned</option>
+    
+  </select>
+</div>
+          
+          <div class="col-6">
+            <label for="price" class="form-label">Price</label>
+            <input type="text" class="form-control" id="price" name="price" th:value="${room.price}">
+          </div>
+          <div class="col-6">
+          <label for="bedtype" class="form-label">Bed Type</label>
+  <select class="form-select" id="bedtype" name="bedtype" th:value="${room.bedtype}">
+    <option value="single bedded">Single bedded</option>
+    <option value="double bedded">Double bedded</option>
+    <option value="three bedded">Three bedded</option>
+  </select>
+</div>
+           
+          
+          <div class="col-12 text-center">
+            <button type="submit" class="btn btn-primary">Edit Room</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
